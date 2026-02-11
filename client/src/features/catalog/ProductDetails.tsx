@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom"
 import type { Product } from "../../app/models/product";
 import { useEffect, useState } from "react";
-import { Grid, Container, Grid2, Typography, Divider, TableContainer, Table, TableBody, TextField, Button, TableRow, TableCell } from '@mui/material';
+import { Grid2, Typography, Divider, TableContainer, Table, TableBody, TextField, Button, TableRow, TableCell } from '@mui/material';
 
 export default function ProductDetails() {
     const {id} = useParams();
