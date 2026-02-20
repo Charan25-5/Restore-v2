@@ -2,9 +2,9 @@ using System;
 using API.DTOs;
 using API.Entities;
 
-namespace API.Extentions;
+namespace API.Extensions;
 
-public static class BasketExtentions
+public static class BasketExtensions
 {
     public static BasketDto ToDto(this Basket basket)
     {

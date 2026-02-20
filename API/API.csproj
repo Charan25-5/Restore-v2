@@ -10,8 +10,8 @@
     <Folder Include="Data\" />
     <Folder Include="DTOs\" />
     <Folder Include="Entities\" />
-    <Folder Include="Extentions\" />
     <Folder Include="Middleware\" />
+    <Folder Include="RequestHelpers\" />
   </ItemGroup>
 
   <ItemGroup>
