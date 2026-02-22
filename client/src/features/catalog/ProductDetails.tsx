@@ -11,8 +11,14 @@ export default function ProductDetails() {
   const { data: basket } = useFetchBasketQuery();
   const item = basket?.items.find(x => x.productId === (id ? +id : 0));
   const [quantity, setQuantity] = useState(item?.quantity ?? 0);
+  const [prevItem, setPrevItem] = useState(item);
 
-  const { data: product, isLoading } = useFetchProductDetailsQuery(id ? +id : 0)
+  if (item !== prevItem) {
+    setPrevItem(item);
+    setQuantity(item?.quantity ?? 0);
+  }
+
+  const { data: product, isLoading } = useFetchProductDetailsQuery(id ? +id : 0);
   if (!product || isLoading) return <div>Loading...</div>
 
   const handleUpdateBasket = () => {

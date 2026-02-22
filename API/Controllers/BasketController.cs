@@ -51,7 +51,9 @@ public class BasketController(StoreContext context) : BaseApiController
         var cookieOptions = new CookieOptions
         {
             IsEssential = true,
-            Expires = DateTime.UtcNow.AddDays(30) 
+            Expires = DateTime.UtcNow.AddDays(30) ,
+            SameSite = SameSiteMode.None,
+            Secure = true
         };
         Response.Cookies.Append("basketId", basketId, cookieOptions);
         var basket = new Basket { BasketId = basketId };

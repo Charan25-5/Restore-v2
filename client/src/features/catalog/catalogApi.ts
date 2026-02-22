@@ -3,7 +3,7 @@ import type { Product } from "../../app/models/product"
 import { baseQueryWithErrorHandling } from "../../app/api/baseApi";
 import type { ProductParams } from "../../app/models/productParams";
 import { filterEmptyValues } from "../../lib/util";
-import type { Pagination } from "../../app/models/Pagination";
+import type { Pagination } from "../../app/models/pagination";
 
 export const catalogApi = createApi({
     reducerPath:'catalogApi',
